@@ -1,0 +1,19 @@
+CDocumentationListWebPage
+=========================
+
+	Description:
+		A class for creating simple web page where is links to
+		generated documentation files.
+	
+	License:
+		GNU AGPL
+
+	Author:
+		Aleksi Räsänen
+		aleksi.rasanen@runosydan.net
+	
+	Copyright:
+		Aleksi Räsänen, 2012
+	
+	Example:
+		See index.php for normal usage 
