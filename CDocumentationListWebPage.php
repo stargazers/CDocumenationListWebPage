@@ -53,8 +53,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			$this->get = $get;
 
 			$this->cFilesystem = new CFilesystem;
-
-			$this->getFilesToShowInList();
 		}
 
 		// ************************************************** 
@@ -82,7 +80,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		// ************************************************** 
 		public function setDocumentationFilesPath( $path )
 		{
-			$this->setDocumentationFilesPath = $path;
+			$this->documentsPath = $path;
 		}
 
 		// ************************************************** 
@@ -108,6 +106,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		// ************************************************** 
 		public function generateWebpage()
 		{
+			$this->getFilesToShowInList();
+
 			$html = '<!DOCTYPE html><html>'
 				. '<head>'
 				. '<title>Documenation list</title>'
