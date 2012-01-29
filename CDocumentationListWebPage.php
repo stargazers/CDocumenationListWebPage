@@ -136,20 +136,27 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		{
 			$cf = $this->cFilesystem;
 
-			$html = '<ul>';
+			$html = '<div id="files">';
+			$html .= '<ul>';
 
 			foreach( $this->filesToShowInList as $filename )
 			{
+				$stat = $cf->getFileInfo( $filename );
+				$mtime = date( 'Y-m-d, H:i:s', $stat['mtime'] );
+
 				$link_title = $cf->getFilenameWithoutExtension(
 					$filename );
 
 				$html .= '<li>';
 				$html .= '<a href="' . $filename . '">' 
 						. $link_title . '</a>';
+				$html .= '<span class="modified_time">'
+					. 'Updated: ' . $mtime;
 				$html .= '</li>';
 			}
 			
 			$html .= '</ul>';
+			$html .= '</div>';
 
 			return $html;
 		}

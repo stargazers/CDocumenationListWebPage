@@ -24,3 +24,14 @@ body
 	text-decoration: underline;
 	color: red;
 }
+
+#files
+{
+	width: 70%;
+}
+
+.modified_time
+{
+	float: right;
+	font-style: italic;
+}
